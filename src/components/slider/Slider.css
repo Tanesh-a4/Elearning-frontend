@@ -1,0 +1,55 @@
+.animation {
+  margin: 10px auto; /* Centers the slider horizontally */
+  height: 600px; /* Maintain the slider height */
+  position: relative; /* Ensures no absolute positioning conflicts */
+  z-index: 1; /* Keeps the slider above other elements if needed */
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Centers the slider horizontally inside the container */
+}
+
+.center {
+  position: relative; /* Changed from absolute to relative */
+  display: flex; /* Helps to center the slider */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+}
+
+.slider {
+  /* margin: 80px auto; Ensures the slider stays centered horizontally */
+  background: url("../../../public/images/carousal1.png");
+  background-size: cover;
+  height: 100%; /* Fill the height of the parent container */
+  width: 100%; /* Adjust to fill the parent container */
+  max-width: 1400px; /* Limit max width for responsiveness */
+  animation: animate 20s infinite;
+  border-radius: 8px; /* Adds rounded corners for aesthetics */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds shadow for depth */
+}
+
+  @keyframes animate {
+    20% {
+      background: url("../../../public/images/carousel-2.png");
+      background-size: cover;
+    }
+  
+    40% {
+      background: url("../../../public/images/carousel-3.png");
+      background-size: cover;
+    }
+  
+    60% {
+      background: url("../../../public/images/carousal1.png");
+      background-size: cover;
+    }
+  
+    80% {
+      background: url("../../../public/images/carousel-2.png");
+      background-size: cover;
+    }
+  
+    100% {
+      background: url("../../../public/images/carousel-3.png");
+      background-size: cover;
+    }
+  }
+  

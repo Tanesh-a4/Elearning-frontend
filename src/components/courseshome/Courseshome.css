@@ -1,0 +1,147 @@
+/* Courseshome.css */
+
+/* Container Styling */
+.courses-home {
+    padding: 30px 20px;
+    background-color:#e0f7fa; /* Light gray background */
+    border-radius: 12px;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+    max-width: 1200px;
+   margin-bottom:20px;
+  margin-left: 12%;
+    text-align: center;
+    opacity: 0; /* Hidden by default for animation */
+    transform: translateY(100px); /* Hidden below the viewport */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+  /* Slide-in Animation */
+  .courses-home.slide-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Title Styling */
+  /* Keyframes for sliding the heading from the left */
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Heading container with box styling */
+.courses-home h2 {
+  display: inline-block;
+
+  padding: 15px 30px;
+  font-size: 50px;
+  color: rgb(6, 158, 158);
+  background-color: #f1f9f9;
+  border: 2px solid rgb(6, 158, 158);
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0; /* Start hidden */
+  transform: translateX(-100%); /* Start offscreen */
+  transition: transform 1.5s ease-out, opacity 1.5s ease-out; /* Smooth animation */
+}
+@media (max-width: 1024px) {
+  .courses-home h2 {
+    font-size: 40px;
+    padding: 12px 25px;
+    text-align: center;  /* Center the heading on smaller screens */
+  }
+}
+
+@media (max-width: 760px) {
+  .courses-home h2 {
+    font-size: 30px;
+    padding: 10px 20px;
+    text-align: center;  /* Center the heading on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .courses-home h2 {
+    font-size: 24px;
+    padding: 8px 15px;
+    text-align: center;  /* Center the heading on smaller screens */
+  }
+}
+
+
+/* When in view, animate the heading */
+.courses-home.slide-in h2 {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+  
+  /* Course Container */
+  .course-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  /* No Courses Message */
+  .no-courses {
+    font-size: 18px;
+    color: #555;
+    margin-top: 20px;
+  }
+  
+  /* Common Button Styling */
+ /* Common Button Styling */
+.common-btn {
+  padding: 12px 24px;
+  background-color: #00796b; /* Teal */
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Button Hover Effect */
+.common-btn:hover {
+  background-color: #004d40; /* Darker teal on hover */
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+  .common-btn {
+    width: 100%; /* Make button full width on smaller screens */
+    margin: 20px 0;
+    position: relative; /* Ensure it stays within the layout */
+  }
+}
+
+@media (max-width: 760px) {
+  .courses-home {
+    padding: 20px;
+    text-align: left; /* Adjust for mobile */
+  }
+
+  .course-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .common-btn {
+    width: 100%; /* Full-width button */
+    margin: 20px auto;
+    position: relative; /* Change from absolute to relative */
+  }
+}

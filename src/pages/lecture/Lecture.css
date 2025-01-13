@@ -1,0 +1,131 @@
+.lecture-page {
+  display: flex;
+  justify-content: space-between;
+  min-height: 80vh;
+  padding: 30px;
+  background-color: #f7f7f7;
+  gap: 30px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.left {
+  width: 70%;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.right {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .lecture-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+
+    h2 {
+      font-size: 26px;
+      color: #008b8b; /* Dark cyan */
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    form {
+      text-align: left;
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: #555;
+        font-weight: 500;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 14px;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+          border-color: #008b8b; /* Dark cyan */
+          outline: none;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 80%;
+    margin-bottom: 15px;
+  }
+
+  .lecture-number {
+    background-color: #fff;
+    padding: 12px;
+    border: 1px solid #ddd;
+    margin-top: 15px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600;
+    color: #008b8b; /* Dark cyan */
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #008b8b; /* Dark cyan */
+      color: white;
+      transform: scale(1.05);
+    }
+  }
+
+  .active {
+    background-color: #008b8b; /* Dark cyan */
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.progress {
+  width: 60%;
+  background-color: #008b8b; /* Dark cyan */
+  padding: 8px;
+  border-radius: 12px;
+  margin: 20px auto;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #006666; /* Slightly darker cyan */
+    transform: scale(1.05);
+  }
+}

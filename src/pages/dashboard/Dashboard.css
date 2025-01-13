@@ -1,0 +1,33 @@
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .box {
+    margin-left: 20px;
+    background-color: darkcyan;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 5px;
+    color: white;
+
+    &:hover {
+      background-color: #432456;
+    }
+  }
+}
+
+.dashboard-content {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap if they don't fit in one row */
+  justify-content: space-around; /* Even spacing between items */
+  gap: 10px; /* Adds consistent spacing between items */
+  padding: 10px; /* Optional: Add some padding to the container */
+}
+
+.dashboard-content p {
+  flex: 1 1 100%; /* Makes the "No course Enrolled Yet" text take full width */
+  text-align: center; /* Centers the text */
+}

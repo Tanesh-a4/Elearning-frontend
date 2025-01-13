@@ -1,0 +1,122 @@
+/* Specific styles for CourseStudy page */
+.course-study-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #012a2e; /* Dark teal for background */
+  padding: 100px 20px;
+  min-height: 80vh;
+}
+
+.course-card {
+  background-color: #f9f9f9; /* Light gray card for better contrast */
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: popIn 0.8s ease-out forwards;
+}
+
+.course-card img {
+  width: 100%;
+  max-width: 350px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.course-card h2 {
+  font-size: 28px;
+  color: #005f61; /* Deep teal for headings */
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.course-card h4 {
+  font-size: 20px;
+  color: #007a7c; /* Medium teal for subheadings */
+  margin-bottom: 10px;
+}
+
+.course-card h5 {
+  font-size: 18px;
+  color: #034748; /* Dark teal for italic text */
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.course-card a {
+  text-decoration: none;
+  background-color: #007a7c; /* Medium teal for buttons */
+  color: #ffffff; /* White text for buttons */
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: popInButton 0.8s ease-out forwards;
+}
+
+.course-card a:hover {
+  background-color: #005f61; /* Deep teal for hover state */
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Pop-in animation for the course card */
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Pop-in animation for the button */
+@keyframes popInButton {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .course-card {
+    padding: 20px;
+  }
+
+  .course-card h2 {
+    font-size: 24px;
+  }
+
+  .course-card h4 {
+    font-size: 18px;
+  }
+
+  .course-card h5 {
+    font-size: 16px;
+  }
+
+  .course-card a {
+    font-size: 16px;
+    padding: 10px 25px;
+  }
+}

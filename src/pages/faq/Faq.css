@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: var(--color-text, #313135);
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg, #ffffff);
+}
+
+.faq-section {
+  padding: 1rem 3rem;
+  background-color: white;
+  border-radius: var(--radius-md, 0.5rem);
+  box-shadow: var(--shadow-md, 0 1px 8px rgba(0, 0, 0, 0.1));
+  max-width: var(--max-width-lg, 800px);
+  margin: 0rem auto;
+}
+
+.faq-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.4rem;
+  color: var(--color-primary, #007791);
+  text-align: center;
+}
+
+.faq-content .faq-row {
+  margin-bottom: 1.5rem;
+}
+
+.faq-row-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--color-primary, #007791);
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+.faq-row-content {
+  font-size: 1rem;
+  line-height: var(--body-line-height, 1.5);
+  color: var(--color-contrast-high, #686f7a);
+}
+
+.faq-row-content p {
+  margin: 0.5rem 0;
+}
+
+.faq-row.active .faq-row-title {
+  color: var(--color-secondary, #ff6347);
+}
+
+.faq-content .faq-row:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .faq-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .faq-row-title {
+    font-size: 1.1rem;
+  }
+
+  .faq-row-content {
+    font-size: 0.95rem;
+  }
+}

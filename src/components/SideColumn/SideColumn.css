@@ -1,0 +1,107 @@
+/* SideColumn styling tailored for My Courses page */
+.SideColumn {
+    width: 100%;
+    max-width: 300px;
+    max-height: 700px;
+    background-color: #f7f9fa; /* Soft off-white background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between filter sections */
+  }
+  
+  .SideColumn h3 {
+    font-size: 1.5rem;
+    color: #023436; /* Deep teal */
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between labels */
+  }
+  
+  .filter-group h4 {
+    font-size: 1.1rem;
+    color: #03343b; /* Dark cyan */
+    margin-bottom: 5px;
+    border-bottom: 2px solid #abd6d7; /* Soft cyan underline */
+    padding-bottom: 2px;
+  }
+  
+  .filter-group label {
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    color: #055a5b; /* Muted cyan */
+    cursor: pointer;
+  }
+  
+  .filter-group input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: #006400; /* Green checkbox color */
+  }
+  
+  .filter-group select {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #d9e7d9; /* Light border */
+    border-radius: 5px;
+    background-color: #ffffff; /* White background */
+    color: #03343b; /* Text color */
+  }
+  
+  .filter-group select:focus {
+    outline: none;
+    border-color: #006400; /* Focus border color */
+    box-shadow: 0 0 4px rgba(0, 100, 0, 0.5);
+  }
+  
+  .cart-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .cart-button button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #006400; /* Green button */
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 100, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .cart-button button:hover {
+    background-color: #004d00; /* Darker green on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .SideColumn {
+      max-width: 100%;
+      margin-right: 0;
+    }
+  
+    .SideColumn h3 {
+      font-size: 1.2rem;
+    }
+  
+    .filter-group select,
+    .cart-button button {
+      font-size: 0.9rem;
+      padding: 8px 15px;
+    }
+  }
+  

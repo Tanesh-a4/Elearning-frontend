@@ -1,0 +1,44 @@
+/* Custom Logo Styling */
+#logo {
+  width: 150px;  /* Increase width as needed */
+  max-height: 10vh;  /* Ensure the height of the logo does not exceed navbar height */
+  object-fit: contain; /* This ensures the logo maintains its aspect ratio */
+  transform: scale(2.0); 
+}
+
+/* Navbar Link Styling */
+.nav-link {
+  color: #00796b !important;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #004d40 !important;
+}
+
+/* Optional Background for Header */
+.navbar {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+/* Make the menu items bold */
+.navbar-nav .nav-link {
+  color: black !important;  /* Default color */
+  font-weight:600;  /* Make text bold */
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for color and underline */
+  padding-left: 20px;  /* Increase space on the left */
+  padding-right: 20px;  /* Increase space on the right */
+  font-size: large;
+}
+
+/* Add underline in dark cyan on hover */
+.navbar-nav .nav-link:hover {
+  color: darkcyan !important;  /* Change color to dark cyan */
+  text-decoration: underline;  /* Add underline effect */
+}
+
+/* Optional: Adjust spacing between the menu items */
+.navbar-nav {
+  margin-left: 0;
+  padding-left: 0;
+}
