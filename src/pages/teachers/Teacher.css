@@ -1,66 +1,152 @@
 .teachers {
-    padding: 2rem;
-   background-color: darkcyan;
-   color: white;
- }
- 
- .h2-teacher {
-   text-align: center;
-   color: darkcyan;
-  
-  
- }
- 
- .teachers-cards {
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   gap: 1.5rem;
-   margin-top: 2rem;
- }
- 
- .teacher-card {
-   background-color: #fff;
-   border-radius: 10px;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-   padding: 1.5rem;
-   transition: transform 0.3s ease, box-shadow 0.3s ease;
- }
- 
- .teacher-card:hover {
-   transform: translateY(-5px);
-   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
- }
- 
- .teacher-card-header {
-   border-bottom: 2px solid #e1e1e1;
-   margin-bottom: 1rem;
-   text-align: center;
- }
- 
- .teacher-card-header h3 {
-   color: darkcyan;
-   font-size: 1.5rem;
-   margin-bottom: 0.5rem;
- }
- 
- .teacher-card-header p {
-   font-size: 1.1rem;
-   color: #555;
- }
- 
- .teacher-card-body {
-   margin-bottom: 1rem;
- }
- 
- .teacher-card-body p {
-   font-size: 1rem;
-   color: #333;
-   margin-bottom: 0.5rem;
- }
- 
- .teacher-card-footer {
-   text-align: center;
-   font-size: 0.9rem;
-   color: #777;
- }
- 
+  padding: 2rem;
+  background-color: darkcyan;
+  color: white;
+}
+
+.h2-teacher {
+  text-align: center;
+  color: darkcyan;
+}
+
+.teachers-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Automatically adjust columns */
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Animation for the cards */
+.teacher-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  opacity: 0; /* Initially invisible */
+  transform: translateY(20px); /* Slightly shifted down */
+  animation: fadeInSlideUp 0.6s ease-in-out forwards; /* Apply animation */
+}
+
+/* Stagger animation for multiple cards */
+.teacher-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.teacher-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.teacher-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+/* Add more delays as needed for subsequent cards */
+
+/* Hover effect */
+.teacher-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-card-header {
+  border-bottom: 2px solid #e1e1e1;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.teacher-card-header h3 {
+  color: darkcyan;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.teacher-card-header p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.teacher-card-body {
+  margin-bottom: 1rem;
+}
+
+.teacher-card-body p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.teacher-card-footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Keyframes for the fade and slide-in animation */
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .teachers {
+    padding: 1.5rem;
+  }
+
+  .teachers-cards {
+    gap: 1rem; /* Reduce spacing between cards */
+  }
+
+  .teacher-card {
+    padding: 1rem; /* Reduce padding for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .h2-teacher {
+    font-size: 1.8rem; /* Reduce header size */
+  }
+
+  .teachers-cards {
+    gap: 0.8rem; /* Further reduce spacing */
+  }
+
+  .teacher-card {
+    padding: 0.8rem; /* Compact padding */
+  }
+
+  .teacher-card-header h3 {
+    font-size: 1.2rem; /* Adjust font size */
+  }
+
+  .teacher-card-body p {
+    font-size: 0.9rem; /* Smaller text for body */
+  }
+}
+
+@media (max-width: 480px) {
+  .teachers {
+    padding: 1rem;
+  }
+
+  .h2-teacher {
+    font-size: 1.5rem; /* Adjust for very small screens */
+  }
+
+  .teacher-card {
+    padding: 0.5rem;
+  }
+
+  .teacher-card-header h3 {
+    font-size: 1rem;
+  }
+
+  .teacher-card-body p {
+    font-size: 0.8rem;
+  }
+}
