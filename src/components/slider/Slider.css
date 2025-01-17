@@ -15,9 +15,10 @@
 }
 
 .slider {
-  /* margin: 80px auto; Ensures the slider stays centered horizontally */
   background: url("../../../public/images/carousal1.png");
-  background-size: cover;
+  background-size: contain; /* Adjust to maintain aspect ratio */
+  background-repeat: no-repeat; /* Prevents tiling of images */
+  background-position: center; /* Centers the background image */
   height: 100%; /* Fill the height of the parent container */
   width: 100%; /* Adjust to fill the parent container */
   max-width: 1400px; /* Limit max width for responsiveness */
@@ -26,30 +27,70 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds shadow for depth */
 }
 
-  @keyframes animate {
-    20% {
-      background: url("../../../public/images/carousel-2.png");
-      background-size: cover;
-    }
-  
-    40% {
-      background: url("../../../public/images/carousel-3.png");
-      background-size: cover;
-    }
-  
-    60% {
-      background: url("../../../public/images/carousal1.png");
-      background-size: cover;
-    }
-  
-    80% {
-      background: url("../../../public/images/carousel-2.png");
-      background-size: cover;
-    }
-  
-    100% {
-      background: url("../../../public/images/carousel-3.png");
-      background-size: cover;
-    }
+@keyframes animate {
+  20% {
+    background: url("../../../public/images/carousel-2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
-  
+
+  40% {
+    background: url("../../../public/images/carousel-3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  60% {
+    background: url("../../../public/images/carousal1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  80% {
+    background: url("../../../public/images/carousel-2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  100% {
+    background: url("../../../public/images/carousel-3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .animation {
+    height: 500px; /* Reduce height for smaller screens */
+  }
+
+  .slider {
+    max-width: 1000px; /* Adjust the max width */
+  }
+}
+
+@media (max-width: 768px) {
+  .animation {
+    height: 400px; /* Further reduce height */
+  }
+
+  .slider {
+    max-width: 600px; /* Adjust the max width */
+  }
+}
+
+@media (max-width: 480px) {
+  .animation {
+    height: 300px; /* Compact height for very small screens */
+  }
+
+  .slider {
+    max-width: 100%; /* Allow the slider to adapt to small widths */
+  }
+}
