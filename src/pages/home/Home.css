@@ -7,7 +7,7 @@ body {
   
   .home {
     margin-top:0px;
-    background-color: rgb(203, 255, 250); /* Soft cyan background */
+    background-color: darkcyan; /* Soft cyan background */
     padding: 1px 1px; /* Reduced padding for a more compact layout */
     text-align: center;
     min-height: 100vh;

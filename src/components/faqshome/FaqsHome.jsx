@@ -23,7 +23,7 @@ const FaqsHome = () => {
         ]}
   return (
     <div className="faq-sections">
-  <h2 className="faq-heading">FAQs</h2>
+  <h2>FAQs</h2>
   <div className="faq-container">
     {faqs.rows.map((faq, index) => (
       <div className="faq-card" key={index}>
